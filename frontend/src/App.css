@@ -170,6 +170,16 @@ font-size: large;
   display: flex;
   flex-direction: column-reverse;
   }
+  .productnames{
+    font-size: medium;
+  }
+  .productstoshow{
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    width: fit-content;
+    
+  }
 }
 
 @media screen and (max-width : 768px) {

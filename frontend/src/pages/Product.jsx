@@ -117,7 +117,7 @@ if (!product) return (
               </div>
 
              
-              <div className="flex justify-around  w-full   p-5  overflow-x-auto   ">
+              <div className="flex justify-around productstoshow  w-full p-5  overflow-x-auto   ">
                 {product.img?.map((image, index) => (
                   <div
                     key={index}
@@ -140,7 +140,7 @@ if (!product) return (
 
             <div className="space-y-6">
              <div className=" flex justify-between items-start">
-                <h1 className="text-3xl font-bold text-gray-900 mr-10  text-2xl ">
+                <h1 className=" productnames font-bold text-gray-900 mr-10  text-2xl ">
                 {product.name}
               </h1>
                {!fav ? (
