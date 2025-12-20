@@ -10,7 +10,7 @@ const Footer = () => {
   Sovereign Style'sxz...
 </span> 
 <img src="/logoo-removebg-preview.png"
-                alt="Logo" />
+                alt="Logo"/>
         </div>
         <div className='universalfontquicksand'>
             <h1 className=' text-2xl font-bold  mb-5'>Company</h1>
