@@ -1,8 +1,8 @@
 import jwt from "jsonwebtoken";
 
-export const AdminAUth = (req, res, next) => {
+  export const AdminAuth = (req, res, next) => {
   try {
-    const { token } = req.headers;  
+    const { token } = req.headers;
 
     if (!token) {
       return res.json({
@@ -13,14 +13,17 @@ export const AdminAUth = (req, res, next) => {
 
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
 
-    if (decoded !== process.env.ADMIN_USERNAME + process.env.ADMIN_PASSWORD) {
+    if (
+      decoded !==
+      process.env.ADMIN_USERNAME + process.env.ADMIN_PASSWORD
+    ) {
       return res.json({
         success: false,
         message: "You are not admin",
       });
     }
 
-    next(); 
+    next();
   } catch (error) {
     return res.json({
       success: false,
@@ -28,3 +31,6 @@ export const AdminAUth = (req, res, next) => {
     });
   }
 };
+
+
+ 
