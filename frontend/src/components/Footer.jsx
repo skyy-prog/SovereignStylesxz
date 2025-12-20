@@ -9,7 +9,8 @@ const Footer = () => {
               <span className="hidden universalfontgreatvibes md:inline text-2xl font-bold bg-gradient-to-tr from-[#ffd900] to-black bg-clip-text text-transparent">
   Sovereign Style'sxz...
 </span> 
-<img src="../public/logoo-removebg-preview.png" alt="logo img" />
+<img src="/logoo-removebg-preview.png"
+                alt="Logo" />
         </div>
         <div className='universalfontquicksand'>
             <h1 className=' text-2xl font-bold  mb-5'>Company</h1>
