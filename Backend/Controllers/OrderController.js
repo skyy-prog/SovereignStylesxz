@@ -4,8 +4,6 @@ import { sendOrderStatusMail } from "../utils/sendEmail.js";
 import { sentmailjustafterplacingorder } from "../utils/sendEmail.js";
 import Stripe from 'stripe'
 import razorpay from 'razorpay'
-// import { order } from "@mui/system";
-// import usermodel from "../Models/Usermodel.js";
 const stripe = new Stripe(process.env.STRIPE_SECRET);
  const razorpayintances = new razorpay({
   key_id:process.env.RAZORPAYID,
