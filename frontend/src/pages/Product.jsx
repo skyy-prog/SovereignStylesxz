@@ -103,9 +103,9 @@ if (!product) return (
   }}
 />      <div className="max-w-7xl  w-full  mx-auto px-4 sm:px-6 lg:px-8">
         <div className="bg-white    overflow-hidden border-b border-b-gray-200">
-          <div className="grid grid-cols-1    w-full  lg:grid-cols-2  p-8">
+          <div className="grid grid-cols-1  w-full  lg:grid-cols-2  p-8">
             <div className="    flex  items-center justify-items-start flex-col">
-              <div className="   rounded-2xl aspect-square flex items-start justify-center ">
+              <div className=" rounded-2xl aspect-square flex items-start justify-center ">
                 <ZoomImage
                   src={selectedImage}
                   zoomScale={3}
@@ -121,7 +121,7 @@ if (!product) return (
                 {product.img?.map((image, index) => (
                   <div
                     key={index}
-                    className={`flex-shrink-0 w-20 h-20 rounded-lg border-2 cursor-pointer transition-all ${
+                    className={`flex-shrink-0 w-20 h-20 rounded-lg border-2  cursor-pointer transition-all ${
                       selectedImage === image
                         ? "border-blue-500 shadow-md"
                         : "border-gray-200 hover:border-gray-300"

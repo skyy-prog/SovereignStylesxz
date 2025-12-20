@@ -24,6 +24,7 @@ const Navbar = () => {
     { name: "About", path: "/about" },
     { name: "Contact", path: "/contact" },
     { name: "Favs", path: "/Favs" },
+    {name:'Orders' , path:'/Orders'}
 
   ];
 const handletologout  =()=>{
