@@ -1,0 +1,302 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Great+Vibes&family=Instrument+Serif:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Great+Vibes&family=Instrument+Serif:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+
+.logo{
+      font-family: "Great Vibes", cursive;
+height: 100%;
+/* background-color: red; */
+font-size: large;
+}
+
+.universel{
+   font-family: "Great Vibes", cursive;
+}
+.besides{ font-family: "Great Vibes", cursive;
+    font-size: large;
+    font:900;
+}
+.username{
+    font-family: "Quicksand", sans-serif;
+
+}
+.tagline{
+    font-family: "Great Vibes", cursive;
+    color: white;
+    /* font-size: large; */
+
+}
+.subtag{
+    font-family: "Great Vibes", cursive;
+
+}
+.maintag{
+        font-family: "Great Vibes", cursive;
+
+}
+
+.infobuttomimg{
+        font-family: "Great Vibes", cursive;
+        
+}
+
+.buttomsection{
+        font-family: "Great Vibes", cursive;
+
+}
+
+  .follow-circle {
+      position: absolute;
+      width: 150px;
+      height: 150px;
+      background: rgba(0, 0, 0, 0.7);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+      pointer-events: none; 
+      transform: translate(-50%, -50%);
+      font-family: Arial;
+      background-blend-mode:color-burn;
+      font-size: 14px;
+        font-family: "Quicksand", sans-serif;
+        font: bolder;
+        font-size: large;
+      transition: 0.05s;
+    }
+
+
+      .follow-circle-female {
+       position: absolute;
+      width: 150px;
+      height: 150px;
+      background: rgba(0, 0, 0, 0.7);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+      pointer-events: none; 
+      transform: translate(-50%, -50%);
+      font-family: Arial;
+      background-blend-mode:color-burn;
+      font-size: 14px;
+        font-family: "Quicksand", sans-serif;
+        font: bolder;
+        font-size: large;
+      transition: 0.05s;
+    }
+       
+
+    .follow-circle-maincontainer {
+    position: absolute;
+    width: 150px; /* Increased size */
+    height: 150px; /* Increased size */
+    background:transparent;
+    mix-blend-mode:hard-light;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    pointer-events: none; 
+    transform: translate(-50%, -50%);
+    font-family: "Quicksand", sans-serif;
+    font-weight: bolder;
+    font-size: 1.3em;
+    
+     
+    
+    /* Smooth transitions */
+    transition: all 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    
+    /* Text enhancement */
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+    
+    /* Optional: Add a slight lift on hover for more interactive feel */
+    /* &:hover {
+        transform: translate(-50%, -50%) scale(1.02);
+        box-shadow: 
+            0 12px 30px rgba(0, 0, 0, 0.5),
+            0 20px 40px rgba(0, 0, 0, 0.4),
+            0 0 0 1px rgba(255, 255, 255, 0.08),
+            inset 0 1px 0 rgba(255, 255, 255, 0.15),
+            inset 0 -1px 0 rgba(0, 0, 0, 0.6);
+    } */
+}
+
+.services{
+          font-family: "Quicksand", sans-serif;
+          font-weight: bolder;
+
+}
+
+ 
+      .follow-circle-kids {
+       position: absolute;
+    width: 150px;
+      height: 150px;
+      background: rgba(0, 0, 0, 0.398);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+      pointer-events: none; 
+      transform: translate(-50%, -50%);
+      font-family: Arial;
+      background-blend-mode:color-burn;
+      font-size: 14px;
+        font-family: "Quicksand", sans-serif;
+        font: bolder;
+        font-size: large;
+      transition: 0.05s;
+  backdrop-filter: blur(1px);
+ 
+       
+    }
+
+ 
+
+@media screen and (max-width : 600px) {
+  .secondmaintree{
+  display: flex;
+  flex-direction: column-reverse;
+  }
+}
+
+@media screen and (max-width : 768px) {
+  .secondmaintree{
+  display: flex;
+  flex-direction: column-reverse;
+  }
+}
+
+ /* html {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: #d2b61a black;
+} */
+
+/* ::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0000005a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to right, #ffd900 0%, #000000 100%);
+  border-radius: 10px;
+  border: 2px solid #111;  
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to right, #ffeb3b 0%, #202020 100%);
+} */
+
+
+
+.universalfontgreatvibes{
+        font-family: "Great Vibes", cursive;
+
+}
+
+.universalfontquicksand{
+        font-family: "Quicksand", sans-serif;
+
+}
+
+.collectionbg{
+  background-color: rgba(0, 0, 0, 0.46);
+}
+.filterbutton{
+  background-color: rgba(0, 0, 0, 0.523);
+  border-radius: 10px;
+  width: 20%;
+        font-family: "Quicksand", sans-serif;
+
+  padding: 5px;
+  color: white;
+  font-size: large;
+   transition: all 0.5s linear;
+}
+
+ ::selection{
+  background-color:black;
+  color: white;
+  border-radius: 10px;
+ }
+
+ 
+ .no-select {
+  user-select: none;
+  -webkit-user-select: none; /* for Safari */
+  -moz-user-select: none;    /* for Firefox */
+  -ms-user-select: none;     /* for old Edge/IE */
+}
+
+.relatedproduct{
+ display: grid;
+ grid-column: 2;
+
+}
+
+
+.input {
+  @apply w-full border border-gray-300 rounded-lg p-3 
+         focus:outline-none focus:ring-2 focus:ring-black/60;
+}
+
+.payment-btn {
+  @apply w-full flex justify-center items-center border border-gray-300 
+         rounded-lg py-3 bg-white hover:shadow-md transition;
+}
+
+.payment-img {
+  @apply h-8 object-contain;
+}
+
+
+
+
+.input-field {
+  padding: 10px;
+  width: 200px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  transition: border 0.3s ease;
+}
+
+.input-field.shake {
+  animation: shake 0.3s ease;
+  border-color: red;
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+.commenttime{
+  font-size: x-small;
+}
+
+
+.usernameinthelogo{
+  font-family: "Quicksand", sans-serif;
+  text-align: center;
+   padding: 4px;
+   font-weight: bold;
+}
