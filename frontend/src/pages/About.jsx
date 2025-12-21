@@ -14,7 +14,9 @@ const About = () => {
         </div>
 
         {/* Main Content */}
-      <div className="lg:w-2/5 flex justify-center">
+        <div className="flex flex-col lg:flex-row items-center gap-12 mb-20">
+          {/* Left Image */}
+          <div className="lg:w-2/5 flex justify-center">
   <div className="relative">
     
     <div className="w-80 h-96 bg-gradient-to-br from-amber-100 to-amber-50 rounded-lg shadow-xl overflow-hidden transform -rotate-3">
@@ -27,7 +29,7 @@ const About = () => {
 
     <div className="absolute -bottom-6 -right-6 w-72 h-80 bg-gradient-to-tr from-slate-800 to-slate-600 rounded-lg shadow-xl overflow-hidden transform rotate-3 z-10">
       <img 
-        src="/Aboutpage4.jpg"
+        src="/aboutpage3.jpg"
         className="w-full h-full object-cover"
         alt="About"
       />
@@ -64,7 +66,7 @@ const About = () => {
             <div className="relative">
               <div className="w-80 h-96 bg-gradient-to-bl from-amber-100 to-amber-50 rounded-lg shadow-xl overflow-hidden transform rotate-3">
                 <img 
-                  src="../public/Aboutpage2.jpg" 
+                  src="https://cdn.salla.sa/qZbeD/e0b24ed8-e46b-47aa-96f0-407acc3b6a39-666.31130063966x1000-1kOFqwGdWhhgSbXHCaCBMRCuPJB5TsL8nzNKJgqK.png" 
                   className="w-full h-full object-cover"
                 />
               </div>
