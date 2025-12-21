@@ -14,24 +14,28 @@ const About = () => {
         </div>
 
         {/* Main Content */}
-        <div className="flex flex-col lg:flex-row items-center gap-12 mb-20">
-          {/* Left Image */}
-          <div className="lg:w-2/5 flex justify-center">
-            <div className="relative">
-              <div className="w-80 h-96 bg-gradient-to-br from-amber-100 to-amber-50 rounded-lg shadow-xl overflow-hidden transform -rotate-3">
-                <img 
-                  src="/Aboutpage.jpg" 
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="absolute -bottom-6 -right-6 w-72 h-80 bg-gradient-to-tr from-slate-800 to-slate-600 rounded-lg shadow-xl overflow-hidden transform rotate-3 z-10">
-                <img 
-                  src="/Aboutpage4.jpg" 
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            </div>
-          </div>
+      <div className="lg:w-2/5 flex justify-center">
+  <div className="relative">
+    
+    <div className="w-80 h-96 bg-gradient-to-br from-amber-100 to-amber-50 rounded-lg shadow-xl overflow-hidden transform -rotate-3">
+      <img 
+        src="/Aboutpage.jpg"
+        className="w-full h-full object-cover"
+        alt="About"
+      />
+    </div>
+
+    <div className="absolute -bottom-6 -right-6 w-72 h-80 bg-gradient-to-tr from-slate-800 to-slate-600 rounded-lg shadow-xl overflow-hidden transform rotate-3 z-10">
+      <img 
+        src="/Aboutpage4.jpg"
+        className="w-full h-full object-cover"
+        alt="About"
+      />
+    </div>
+
+  </div>
+</div>
+
 
           {/* Text Content */}
           <div className="lg:w-3/5">
