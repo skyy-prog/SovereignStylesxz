@@ -19,7 +19,6 @@ const Login = () => {
     e.preventDefault();
     console.log(email , password , name);
    if(currentstate === 'Sign up'){
-    handletocreatepassword();
     try {
       const response = await axios.post(BACKEND_URL+ '/api/user/register/'  ,{name , password , email})
       if(response.data.success){
@@ -140,7 +139,16 @@ try {
             onChange={(e)=>setpassword(e.target.value)}
             required
           />
-          {currentstate === 'Sign up' ?  <button  className=" bg-black p-3 rounded-2xl w-full  universalQuicksand text-white  cursor-pointer" onClick={handletocreatepassword}>Get AI password</button> : ''}
+         {currentstate === 'Sign up' && (
+  <button
+    type="button"   
+    className="bg-black p-3 rounded-2xl w-full universalQuicksand text-white cursor-pointer"
+    onClick={handletocreatepassword}
+  >
+    Get AI password
+  </button>
+)}
+
        {showeye ? <IoIosEye  size={30} className=" cursor-pointer " onClick={()=>setshoweye(!showeye)}/>: <FaEyeLowVision  size={30} className=" cursor-pointer" onClick={()=>setshoweye(!showeye)}/>}
 
           <button
