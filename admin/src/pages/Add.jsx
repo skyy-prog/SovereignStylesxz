@@ -124,13 +124,31 @@ const handletogeneratethdescription = async()=>{
      <div className="min-h-screen w-full bg-gray-50 py-6 px-4 rounded-4xl">
   <div className="max-w-3xl mx-auto">
     {/* Header */}
-    <div className="text-center mb-8">
-      <div className=' w-full flex justify-between items-center  border-b border-black mb-6 '><img src="./public/logoo-removebg-preview.png"  className='  h-15 w-15  '/>   <h1 className="hidden md:inline text-3xl font-bold bg-gradient-to-tr from-[#ffd900] p-3 to-black bg-clip-text text-transparent tracking-tight">
-          Sovereign Style'sxz...
-        </h1>  <img src="./public/logoo-removebg-preview.png"  className=' h-15 w-15 scale-x-[-1]  '/></div>
-      <h1 className="text-3xl font-bold text-gray-800">Upload Product</h1>
-      <p className="text-gray-600 mt-1">Add a new product to your collection</p>
-    </div>
+   <div className="text-center mb-8">
+  <div className="w-full flex justify-between items-center border-b border-black mb-6">
+    
+    <img
+      src="/logoo-removebg-preview.png"
+      className="h-15 w-15"
+      alt="Logo"
+    />
+
+    <h1 className="hidden md:inline text-3xl font-bold bg-gradient-to-tr from-[#ffd900] p-3 to-black bg-clip-text text-transparent tracking-tight">
+      Sovereign Style&apos;sxz...
+    </h1>
+
+    <img
+      src="/logoo-removebg-preview.png"
+      className="h-15 w-15 scale-x-[-1]"
+      alt="Logo"
+    />
+
+  </div>
+
+  <h1 className="text-3xl font-bold text-gray-800">Upload Product</h1>
+  <p className="text-gray-600 mt-1">Add a new product to your collection</p>
+</div>
+
 
     <div className="bg-white rounded-2xl shadow-md p-6 border border-gray-200">
       
