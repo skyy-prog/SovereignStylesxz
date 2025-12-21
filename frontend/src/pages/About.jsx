@@ -114,7 +114,7 @@ const About = () => {
             <div className="lg:w-2/5 flex items-center justify-center p-8">
               <div className="w-full h-64 lg:h-80 bg-gradient-to-br from-amber-500 to-amber-300 rounded-xl shadow-xl overflow-hidden">
                 <img 
-                  src="../public/logoo-removebg-preview.png" 
+                  src="/logoo-removebg-preview.png" 
                   className="w-full h-full object-contain p-10"
                 />
               </div>
