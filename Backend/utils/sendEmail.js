@@ -76,8 +76,8 @@ export const sentmailjustafterplacingorder = async (
       attachments: [
         {
           filename: 'logoo.png',
-          path: './publics/logoo.png', // ✅ correct backend path
-          cid: 'brandlogo', // ✅ SAME as img src
+          path: './publics/logoo.png',  
+          cid: 'brandlogo',  
         },
       ],
     });

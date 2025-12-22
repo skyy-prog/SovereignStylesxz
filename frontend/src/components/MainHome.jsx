@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import Latestcolletion from "./Latestcolletion";
 import { Favcontext } from "../context/Favcontext"; 
 import { Shopcontext } from "../context/shopcontext";
+import BrandFAQ from "./BrandFAQ";
 //  import { shopcontext } from '../context/shopcontext';
 // import toast, { Toaster } from 'react-hot-toast';
 // import { AnimatePresence , motion } from "framer-motion";
@@ -300,6 +301,9 @@ const MainHome = () => {
             )}
           </div>
         </div>
+      </div>
+      <div   onMouseEnter={handletohidethelogo} onMouseLeave={handletoshowthelogo}>
+         <BrandFAQ/>
       </div>
     </div>
   );
