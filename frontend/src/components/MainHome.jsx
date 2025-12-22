@@ -8,6 +8,7 @@ import { Shopcontext } from "../context/shopcontext";
 //  import { shopcontext } from '../context/shopcontext';
 // import toast, { Toaster } from 'react-hot-toast';
 // import { AnimatePresence , motion } from "framer-motion";
+// import Snowfall from 'react-snowfall'
 const MainHome = () => {
   const IMgRfef = useRef(null);
   const CircleRef = useRef(null);
@@ -98,11 +99,12 @@ const MainHome = () => {
       className="w-full bg-white"
     >
      
+     
       {toshowthelogo && (
         <div
           ref={maincircle}
           className="follow-circle-maincontainer absolute cursor-pointer w-[100px] h-[100px] bg-black/70 text-white flex items-center justify-center rounded-full pointer-events-none -translate-x-1/2 -translate-y-1/2 p-5"
-        >
+        >   
           <div
             onClick={() => setclickcircle(!clickcircle)}
             className="flex items-center justify-center w-full h-full cursor-pointer"
