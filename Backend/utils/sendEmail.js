@@ -42,25 +42,14 @@ export const sentmailjustafterplacingorder = async (
 
       html: `
         <div style="font-family: Arial, sans-serif; line-height: 1.6;">
-          
-          <img 
-            src="https://res.cloudinary.com/di7a9lkbm/image/upload/v1766512939/brand/sovereign_logo.png"
-            alt="Sovereign Styles Logo" 
-            width="120"
-            style="margin-bottom: 15px; border-radius:10px"
-          />
-
           <h2>Hello ${name},</h2>
-
           <p>
             Thank you for placing an order with <b>Sovereign Styles</b> ❤️
           </p>
-
           <p>
             Your order has been successfully placed for 
             <b>${productname}</b>.
           </p>
-
           <p>
             🚚 Sit back and relax! Your order will be delivered soon to
             <strong>${address}</strong>.
