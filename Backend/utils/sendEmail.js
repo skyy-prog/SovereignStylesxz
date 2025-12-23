@@ -1,4 +1,5 @@
 import nodemailer from "nodemailer";
+ 
 const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
@@ -6,7 +7,8 @@ const transporter = nodemailer.createTransport({
     pass: process.env.EMAIL_PASS  
   }
 });
-
+ 
+ 
 export const sendOrderStatusMail = async (to, orderId, status , productname) => {
   try {
     await transporter.sendMail({
@@ -25,8 +27,7 @@ export const sendOrderStatusMail = async (to, orderId, status , productname) => 
     console.error('Error sending order status email:', err);
   }
 };
-
-
+ 
 export const sentmailjustafterplacingorder = async (
   email,
   name,
@@ -43,7 +44,7 @@ export const sentmailjustafterplacingorder = async (
         <div style="font-family: Arial, sans-serif; line-height: 1.6;">
           
           <img 
-            src="cid:brandlogo" 
+            src="https://res.cloudinary.com/di7a9lkbm/image/upload/v1766512939/brand/sovereign_logo.png"
             alt="Sovereign Styles Logo" 
             width="120"
             style="margin-bottom: 15px; border-radius:10px"
@@ -72,14 +73,6 @@ export const sentmailjustafterplacingorder = async (
 
         </div>
       `,
-
-      attachments: [
-        {
-          filename: 'logoo.png',
-          path: './publics/logoo.png',  
-          cid: 'brandlogo',  
-        },
-      ],
     });
 
     console.log('Order confirmation email sent successfully');

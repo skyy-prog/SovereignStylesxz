@@ -37,7 +37,6 @@ export const addproducts = async (req, res) => {
       })
     );
     console.log(imageURL);
-
     const productsData = {
       name,
       description,
