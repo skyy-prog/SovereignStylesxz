@@ -34,38 +34,43 @@ export const sentmailjustafterplacingorder = async (
   productname,
   address
 ) => {
+  console.log("ADDRESS TYPE →", typeof address, address);
   try {
+
+    const formattedAddress = typeof address === "object"
+      ? `${address.street}, ${address.city}, ${address.state} - ${address.pincode}`
+      : address;
+
     await transporter.sendMail({
       from: `"Sovereign Styles" <${process.env.EMAIL_USER}>`,
       to: email,
       subject: `Thank you for your order! 🎉`,
-
       html: `
         <div style="font-family: Arial, sans-serif; line-height: 1.6;">
           <h2>Hello ${name},</h2>
-          <p>
-            Thank you for placing an order with <b>Sovereign Styles</b> ❤️
-          </p>
-          <p>
-            Your order has been successfully placed for 
+
+          <p>Thank you for placing an order with <b>Sovereign Styles</b> ❤️</p>
+
+          <p>Your order has been successfully placed for
             <b>${productname}</b>.
           </p>
+
           <p>
-            🚚 Sit back and relax! Your order will be delivered soon to
-            <strong>${address}</strong>.
+            🚚 Your order will be delivered soon to:
+            <br/>
+            <strong>${formattedAddress}</strong>
           </p>
 
           <p>We’ll keep you updated as it moves forward.</p>
 
           <h3>Cheers 👋</h3>
-          <h3><b>Sovereign Style'sxz..</b></h3>
-
+          <h3><b>Sovereign Styles</b></h3>
         </div>
       `,
     });
 
-    console.log('Order confirmation email sent successfully');
+    console.log("Order confirmation email sent successfully");
   } catch (error) {
-    console.error('Error sending order status email:', error);
+    console.error("Order confirmation mail error →", error.message);
   }
 };
