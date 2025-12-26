@@ -17,13 +17,12 @@ const Comments = ({ product }) => {
   let productId = id;
   useEffect(() => {
     setfinalcomments(products.flatMap((p) => p.review));
-    console.log(commentname);
+
   }, [products, commentname]);
   const productsss = products.find((p) => p._id === productId);
   const reviews = productsss.review;
   const handleAddComments = async (e) => {
          e.preventDefault();
-      console.log(productsss.review);
     if(token){
       try {
         setcommentext((prev) => [
@@ -41,13 +40,13 @@ const Comments = ({ product }) => {
           commentname: commentname,
         });
         if (response.data.message) {
-          console.log(response.data.message);
+          
           toast.success("Comment added");
         } else {
-          console.log(response.data.message);
+          toast.error("Failed to add");
         }
       } catch (error) {
-        console.log(error);
+        toast.error(error.message);
       }
     }else{
       toast.error('Login Or Register first')

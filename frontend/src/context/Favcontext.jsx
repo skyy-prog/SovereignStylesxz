@@ -4,7 +4,6 @@ export const Favcontext = createContext();
 
 const Functionfavcontext = (props) => {
   const [favorites, setfavorites] = useState([]);
-  console.log(favorites)
   const value = {
     favorites,
     setfavorites,

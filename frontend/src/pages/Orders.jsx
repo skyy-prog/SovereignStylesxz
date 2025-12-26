@@ -4,6 +4,7 @@ import { useContext } from 'react'
 import { Shopcontext } from '../context/shopcontext'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
+import toast from 'react-hot-toast'
 const Orders = () => {
   const {products , currency , BACKEND_URL , token}  = useContext(Shopcontext);
   const [allorders , setallorders] = useState([])
@@ -27,20 +28,17 @@ const Orders = () => {
         console.log(items);
       })
     })
-    console.log(finallallorder)
     setallorders(finallallorder.reverse());
      }else{
-    console.log(response.data)
+    toast.success(response.data.message);
    }
     } catch (error) {
-      console.log(error)
+      toast.success(error.message);
     }
   }
 
   useEffect(()=>{
     getallorders();
-    // console.log(token);
-    console.log(allorders)
   } ,[token])
   return (
      <>

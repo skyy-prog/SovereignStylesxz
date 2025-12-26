@@ -38,7 +38,6 @@ setTimeout(() => {
 
   } catch (error) {
     toast.error("Server error — try again!");
-    console.log(error);
   }
 };
   return (

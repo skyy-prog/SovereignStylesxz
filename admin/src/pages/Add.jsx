@@ -34,10 +34,9 @@ const handletogeneratethdescription = async()=>{
     toast.error('Enter the name first')
    }
      const response = await axios.post(backend_url + '/api/ai/generate' , {name});
-    console.log(response.data.description)
     setdescription(response.data.description)
   } catch (error) {
-    console.log(error.message)
+    toast.error(error.message);
   }
 }
   const handletopostheproduct   = async(e)=>{
@@ -87,7 +86,7 @@ const handletogeneratethdescription = async()=>{
     }
 
     } catch (error) {
-      console.log(error)
+      toast.error(error.message);
     }
     
   }

@@ -17,7 +17,6 @@ const Login = () => {
   const navigate = useNavigate();
   const handletopreventandcontrolthesubmitfunction = async(e)=>{
     e.preventDefault();
-    console.log(email , password , name);
    if(currentstate === 'Sign up'){
     try {
       const response = await axios.post(BACKEND_URL+ '/api/user/register/'  ,{name , password , email})
@@ -25,12 +24,11 @@ const Login = () => {
         setokens(response.data.token);
         localStorage.setItem('token',response.data.token)
         setname("")
-        console.log(token);
         localStorage.setItem('name' ,  response.data.name)
         toast.success("Signed UP successfully");
         
       }else{
-        console.log(response.data.msg)
+         
         toast.success("Failed to Sign up")
 
       }

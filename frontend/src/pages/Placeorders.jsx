@@ -4,7 +4,7 @@ import { Shopcontext } from "../context/shopcontext";
 import { FaArrowAltCircleRight } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-
+import toast from "react-hot-toast";
 const Placeorders = () => {
   const {
     getamountTotal,
@@ -131,16 +131,15 @@ switch (method) {
   }
 break;
   default:
-    console.log("Invalid payment method");
+    toast.error("Invalid payment method");
 }
 
     } catch (error) {
-      console.error("Order error:", error);
+    toast.error(error.message);      
     }
   };
 useEffect(()=>{
-console.log(cartItems) 
-console.log(method)
+ 
 },[])
   return (
     <div className="w-full min-h-screen bg-gray-50 flex justify-center items-start p-2">

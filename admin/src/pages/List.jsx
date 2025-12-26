@@ -12,7 +12,7 @@ const handlertoListtheproduct = async () => {
     const response = await axios.get(backend_url + '/api/product/list');
     setList(response.data.Products);
   } catch (error) {
-    console.log(error);
+    toast.error(error.message);
   }
 };
 const handletodeletetheproduct = async(id , name )=>{

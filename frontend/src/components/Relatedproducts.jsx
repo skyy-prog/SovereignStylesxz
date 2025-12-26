@@ -5,7 +5,7 @@ import { Shopcontext } from "../context/shopcontext";
 const Relatedproducts = ({ Relatedproduct }) => {
   const { products } = useContext(Shopcontext);
   const [Relatedpr, setRelatedpr] = useState([]);
-  // console.log(products);
+ 
 
   useEffect(() => {
     const slicedproducts = products 
@@ -14,8 +14,6 @@ const Relatedproducts = ({ Relatedproduct }) => {
         (item) => item.category === Relatedproduct.category && item._id !== Relatedproduct._id && item.subcategory === Relatedproduct.subcategory
       );
       setRelatedpr(finalrelatedproduct);
-      // console.log(finalrelatedproduct)
-
     }
      
   }, [products, Relatedproduct]);
