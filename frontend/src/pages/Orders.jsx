@@ -18,14 +18,12 @@ const Orders = () => {
     setallorders(response.data);
     let finallallorder = [];
     response.data.orders.map((orders)=>{
-      console.log(orders)
       orders.items.map((items)=>{
         items['status'] = orders.status;
         items['payment']= orders.payment;
         items['paymentMethod'] = orders.paymentMethod;
         items['date'] = orders.date;
         finallallorder.push(items);
-        console.log(items);
       })
     })
     setallorders(finallallorder.reverse());

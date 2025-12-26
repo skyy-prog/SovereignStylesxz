@@ -8,13 +8,8 @@ const Auth = (req,res,next)=>{
     try {
         const token_decode = jwt.verify(token , process.env.JWT_SECRET)
         req.body.userId = token_decode.id;
-        console.log("AUTH:", req.body);
-
         next();
-console.log("AUTH:", req.body);
-
     } catch (error) {
-        console.log(error)
         res.json({success:false , message:error.message})
     }
 }

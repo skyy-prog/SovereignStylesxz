@@ -113,7 +113,6 @@ export const addReviews = async (req, res) => {
 
     return res.json({ success: true, message: "Review added for the product" });
   } catch (error) {
-    console.log(error);
     return res.json({ success: false, message: "Internal error" });
   }
 };

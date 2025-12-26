@@ -51,7 +51,6 @@ const Placeorders = () => {
     order_id: order.id,
     receipt:order.receipt,
     handler: async(response)=>{
-      console.log(response);
      try {
         const {data} = await axios.post(BACKEND_URL + '/api/order/verifyrazorpay' , response, {headers:{token}})
       if(data.success){
@@ -102,11 +101,11 @@ switch (method) {
     const response = await axios.post(
       BACKEND_URL + '/api/order/placeorder', CartObject, { headers: {token } } );
       if(response.data.success){
-        console.log('product added and placed' , response.data.success)
+        toast.success('product added and placed')
         setcartitems({})
         navigate('/Orders')
       }else{
-          console.log('product could not  placed' , response.data.success)
+          toast.error('product could not  placed')
       }
       
     console.log(response.data);
@@ -118,14 +117,13 @@ switch (method) {
       const {sessionURL} = response.data;
       window.location.replace(sessionURL)
     }else{
-      console.log('error in payment with stripe')
+      toast.error('error in payment with stripe')
     }
   }
   break;
   case "razorpay":{
     const response = await axios.post(BACKEND_URL+'/api/order/withrazorpay'  , CartObject , {headers:{token}});
     if(response.data.success){
-      console.log(response.data.order);
       initpay(response.data.order)
     }
   }

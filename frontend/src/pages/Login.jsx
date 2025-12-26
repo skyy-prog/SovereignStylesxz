@@ -28,29 +28,26 @@ const Login = () => {
         toast.success("Signed UP successfully");
         
       }else{
-         
         toast.success("Failed to Sign up")
-
       }
     } catch (error) {
-      console.log(error)
+      toast.error(error.message)
     }
    }else if(currentstate ===  'Login'){
     try {
       const reponseLogin = await axios.post(BACKEND_URL+'/api/user/userlogin/',{email, password});
         if(reponseLogin.data.success){
-        console.log(reponseLogin.data)
+         
          setokens(reponseLogin.data.token);
         localStorage.setItem('token',reponseLogin.data.token)
         localStorage.setItem('name' ,  reponseLogin.data.username)
-        console.log(reponseLogin.data.username);
+         
 
-      }else{
-        console.log(reponseLogin.data.msg)
+      }else{ 
         toast.error(reponseLogin.data.msg+'  please register')
       }
     } catch (error) {
-       console.log(error)
+       toast.error(error.message)
     }
    }
   }
@@ -66,7 +63,7 @@ try {
    }
        
 } catch (error) {
-  console.log(error.message)
+  toast.error(error.message)
 }
     }
   useEffect(()=>{
