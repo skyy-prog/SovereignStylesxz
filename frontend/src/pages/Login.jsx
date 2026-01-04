@@ -28,10 +28,11 @@ const Login = () => {
         toast.success("Signed UP successfully");
         
       }else{
-        toast.success("Failed to Sign up")
+        toast.success(response.data.msg);
+        console.log(response.data.msg)
       }
     } catch (error) {
-      toast.error(error.message)
+      toast.error(error.message) 
     }
    }else if(currentstate ===  'Login'){
     try {
@@ -149,8 +150,7 @@ try {
           <button
             type="button"
             onClick={() =>
-              setcurrentstate(currentstate === "Login" ? "Sign up" : "Login")
-            }
+              setcurrentstate(currentstate == "Login" ? "Sign up" : "Login")}
             className="w-full text-black cursor-pointer universalfontquicksand font-bold"
           >
             {currentstate === "Login"

@@ -37,7 +37,6 @@ const placeorder = async(req,res)=>{
         res.json({success:false , message:'Got Some Trubble'})
         console.log(error.message)
     }
-
 }
  
  const placeorderwithstripe = async (req, res) => {

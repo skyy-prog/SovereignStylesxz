@@ -4,7 +4,7 @@ import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 
 const createtoken = (id) => {
-  return jwt.sign({ id }, process.env.JWT_SECRET);
+  return  jwt.sign({ id }, process.env.JWT_SECRET);
 };
  
 export const UserLogin = async (req, res) => {
