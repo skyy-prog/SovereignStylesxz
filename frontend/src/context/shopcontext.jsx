@@ -10,7 +10,7 @@ import axios from "axios";
 export const Shopcontext = createContext();
 
 const Shopcontextprovider = (props) => {
-  const currency = "$";
+  const currency = "₹ ";
   const delivery_fee = 100;
   const [search, setsearch] = useState();
   const [showsearch, setshowsearch] = useState(false);
