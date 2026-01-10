@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import axios from 'axios'
 import { backend_url } from '../App'
 import { SiOrganicmaps } from "react-icons/si"
@@ -8,7 +8,6 @@ const Order = ({ token }) => {
 
   const SHOP_ADDRESS = "Seawoods, Navi Mumbai, Maharashtra"
   const [orders, setorders] = useState([])
-
   const groupItemsByProduct = (items = []) => {
     const map = {}
 
@@ -56,17 +55,21 @@ const Order = ({ token }) => {
     return `https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(SHOP_ADDRESS)}&destination=${encodeURIComponent(destination)}`
   }
 
-  const statushandler = async (orderId, event) => {
+  const statushandler = async (orderId, event ) => {
     try {
+      let decision  = false;
+       if(event.target.value === 'Delivered'){
+             decision = true;
+        }
       const response = await axios.post(
         backend_url + '/api/order/updatestatus',
-        { orderId, status: event.target.value },
+        { orderId, status: event.target.value , payment:decision},
         { headers: { token } }
       )
 
       if (response.data.success) {
-        await getallOrders()
-        toast.success('Updated')
+        await getallOrders();
+        toast.success('Updated'); 
       }
     } catch (error) {
       console.log(error.message)
@@ -166,12 +169,12 @@ const Order = ({ token }) => {
                       <p>
                         {items?.payment
                           ? <b className='text-green-400 cursor-pointer'>Done</b>
-                          : <b className='cursor-pointer text-red-600'>Pending</b>}
+                          : <b className={`cursor-pointer text-red-600`}>Pending</b>}
                       </p>
                     </div>
 
                     <select
-                      onChange={(event) => statushandler(items._id, event)}
+                      onChange={(event) => statushandler(items._id, event )}
                       value={items?.status}
                       className='p-4 rounded-2xl'
                     >

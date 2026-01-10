@@ -205,12 +205,10 @@ const allorder = async(req,res)=>{
 
 const updatestatus = async (req, res) => {
   try {
-    const { orderId, status } = req.body;
-
-    // Update the order status
+    const { orderId, status  , payment} = req.body;
     const order = await Ordermodel.findByIdAndUpdate(
       orderId,
-      { status },
+      { status , payment},
       { new: true }
     );
 
@@ -218,7 +216,6 @@ const updatestatus = async (req, res) => {
       return res.status(404).json({ success: false, message: 'Order not found' });
     }
 
-    // Get email from the address object
     const userEmail = order.address?.email;
     const items = order.items;
     const productname =items.map((item)=> item.name).join(" , ")
@@ -227,7 +224,6 @@ const updatestatus = async (req, res) => {
     } else {
       console.log("User email not found for order:", order._id);
     }
-
     res.json({ success: true, message: 'Status updated and email sent' });
   } catch (error) {
     console.error(error);
