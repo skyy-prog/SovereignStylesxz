@@ -176,13 +176,13 @@ const Order = ({ token }) => {
                     <select
                       onChange={(event) => statushandler(items._id, event )}
                       value={items?.status}
-                      className='p-4 rounded-2xl'
+                      className='p-4 rounded-2xl cursor-pointer'
                     >
-                      <option value="Order placed">Order Placed</option>
-                      <option value="Packing">Packing</option>
-                      <option value="Shipped">Shipped</option>
-                      <option value="Out For Delivery">Out For Delivery</option>
-                      <option value="Delivered">Delivered</option>
+                      <option value="Order placed" className=' cursor-pointer'>Order Placed</option>
+                      <option value="Packing" className=' cursor-pointer'>Packing</option>
+                      <option value="Shipped" className=' cursor-pointer'>Shipped</option>
+                      <option value="Out For Delivery" className=' cursor-pointer'>Out For Delivery</option>
+                      <option value="Delivered" className=' cursor-pointer'>Delivered</option>
                     </select>
                   </div>
 
